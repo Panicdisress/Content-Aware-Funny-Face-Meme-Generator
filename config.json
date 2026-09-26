@@ -1,0 +1,6 @@
+{
+  "input_image": "D:\\bAKEUPS\\C#\\SeamCarving-1\\ariyan.jpg",
+  "output_folder": "output_frames",
+  "total_frames": 60,
+  "max_squish_percent": 0.6
+}
