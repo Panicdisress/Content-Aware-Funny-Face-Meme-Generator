@@ -115,12 +115,13 @@ Video seam carving is highly demanding. The application includes a "Performance 
 
 ### 💡 Pro-Tips for Best Results
 
+* `Ignore Performance safeguard in img2img mode.` **Only batch size is relevant**
 * **For Smooth Warping:** Keep `Jitter` at 0.
 * **Resolution Tip:** For the fastest performance, use source images with a width under **600px**.
 * **Preview Buttons** before doing heavy lifting of full animation render you can just preview frame results in both vid2vid methods.
 
 ### 📏 Image Size:
-* `<=  600px`: lightning fast⚡
+* `<= 600px`: lightning fast⚡
 * `600-1200px`: fast generation ✓
 * `> 1200px`: slow 🐌
 
@@ -128,9 +129,8 @@ Video seam carving is highly demanding. The application includes a "Performance 
 ### ⚙️ Installation from Source (For Developers)
 If you are compiling this project from source in Visual Studio, you must provide your own FFmpeg executable:
 1. Download the latest Windows essentials build from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip).
-2. Extract the zip file, navigate into the `bin` folder, and copy `ffmpeg.exe`.
-3. Create a folder named `ffmpeg` in the root directory of this project.
-4. Paste `ffmpeg.exe` inside it.
+2. Extract the zip file, navigate into the `ffmpeg` folder, and paste `ffmpeg.exe`.
+3. Make sure to select `Copy to output directory` on *Solution Explorer* in `Visual Studio`.
 
 ### 🛠️ Libraires:
 
