@@ -5,26 +5,26 @@
 
 </p>
 
-## GPU-accelerated content-aware image resizing for creating distorted animations.
+## GPU-accelerated content-aware image resizing for creating distorted videos.
 
 <p align="center"> 
   <img src="Media/output_video3.gif" alt="description" width="200"> 
   <img src="Media/nice.gif" alt="description" width="200"> 
-  <img src="Media/30%WhyNot.gif" alt="description" width="200"> 
-  <img src="Media/mutahar.gif" alt="description" width="200">
+  
 </p>
 
 ---
 
-*Skip the installation process and jump straight into the action by going to **[Releases](https://github.com/Panicdisress/seam-carving-meme-generator/releases)** page.*
+**[Releases](https://github.com/Panicdisress/seam-carving-meme-generator/releases)** page.*
 
 ---
 
-### ✨ Features
+### ✨ Key Features
 
-* **⚡ GPU-Accelerated** – 10-20x faster than CPU using CuPy/CUDA kernels.
+* **⚡ GPU-Accelerated** – 10-20x faster than *Photoshop script method*.
 * **🎯 Content-Aware** – Intelligent seam carving algorithm that preserves important image details.
-* **🌀 Customizable Chaos** – Adjust **Frame Jitter** and **Energy Noise** for unique, glitchy effects.
+* **🫠Facial Recognition** - Targets face for funny look.
+* **🌀 Customizable Chaos** – Adjust **Jitter** and **seed** for unique, glitchy effects.
 * **🎬 Built-in Video Export** – Integrated FFmpeg support to convert frames to MP4 instantly.
 * **🖥️ User-Friendly GUI** – Simple Tkinter-based interface; no coding required to run.
 
@@ -32,85 +32,68 @@
 
 | 10% Intensity | 30% intensity |
 | :---: | :---: |
-| <img src="Media/10%Men_Cry.gif" width="300"> | <img src="Media/30%Men_Cry.gif" width="300"> |
+| <img src="Media/Men_Cry-10.gif" width="300"> | <img src="Media/Men_Cry-30.gif" width="300"> |
 | **Time taken** | `1.4 sec.` |
 
 ## Fully 📸functional UI with inbuild video conversion.⬇️
 <p align="center">
-  <img src="media/ui.png" width="500" alt="App Interface">
+  <img src="Media/Interface.jpg" width="500" alt="App Interface">
 </p>
 
 ---
 
-### 🚀 Quick Start
-### *Prerequisites*
-* **NVIDIA GPU** (Required for CuPy/CUDA acceleration).
-* **Python 3.8+**
-* **FFmpeg** (Added to system PATH for video export).
-* **TKinter**
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/Panicdisress/seam-carving-meme-generator
-cd content-aware-meme
-# Install dependencies (includes CUDA runtime)
-pip install -r requirements.txt
-```
-
-### Use
-Run the `launch_gui.bat` file.
 
 ---
 
 ## 🎛️ Parameter Guide
+* **Img2Vid**
 
 | Parameter | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | **Frames** | Integer | `60` | Total number of frames to generate for the animation sequence. |
-| **Squish %** | Float | `0.6` | The amount of horizontal distortion (0.01 to 1.0). Higher = intense effect. |
-| **Frame Jitter** | Pixels | `2` | Adds per-frame random pixel shifts (0-10) for a "shaking" effect. |
-| **Energy Noise** | Std Dev | `50` | Injects randomness (0-200) into seam selection for chaotic warping. |
-| **Forward Energy** | Toggle | `OFF` | Use look-ahead algorithms to reduce artifacts (Slower, but higher quality). |
-| **Framerate** | FPS | `30` | The playback speed of the exported MP4 video. |
-| **Quality** | Select | `High` | Compression level for the final FFmpeg video export. |
+| **Intensity** | Percentge | `40%` | The total amount of image width/height to carve away (10% to 80%). Higher = intense squish. |
+| **Jitter** | Percentage | `25%` | Injects random noise into the energy map to create a chaotic, shaking, or boiling effect. |
+| **Framerate** | FPS | `12` | The playback speed of the exported MP4 video. |
+
+* **vid2vid (Uniform)**
+ 
+| Parameter | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| Seed | Integer | `42` | Injects random noise into the algorithm for a glitchy, unstable visual effect. |
+| Face Bias | Integer | `-50` | Directs the algorithm using facial recognition. -ve value effect more on face. +ve value protect face. |
+
+* **vid2vid (Progressive)**
+  
+| Parameter | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| Max intensity | Percentage | `40%` | Peak distortion that the video will reach on its final frame. |
+
+
+
 
 ---
 
 ### 💡 Pro-Tips for Best Results
 
-* **For Smooth Warping:** Keep `Frame Jitter` at 0 and `Energy Noise` below 20.
-* **For Maximum Chaos:** Crank `Energy Noise` to 100+ and `Frame Jitter` to 5.
-* **Resolution Tip:** For the fastest GPU performance, use source images with a width under **512px**.
-* **Video Export:** If you change your mind about the framerate after processing, just click **"Convert Last Result to Video"** to re-render without re-calculating the seams!
+* **For Smooth Warping:** Keep `Jitter` at 0.
+* **Resolution Tip:** For the fastest performance, use source images with a width under **600px**.
+* **Preview Buttons** before doing heavy lifting of full animation render you can just preview frame results in both vid2vid methods.
 
 ### 📏 Image Size:
-* less than  512px: lightning fast⚡
-* 512-1080px: fast generation ✓
-* greater than 1080px: slow 🐌
+* less than / equal to  600px: lightning fast⚡
+* 600-1200px: fast generation ✓
+* greater than 1200px: slow 🐌
 
 ---
 
 ### 🛠️ Libraires:
-* **CuPy**: For GPU-accelerated array computing.
 
 * **OpenCV**: Image manipulation and frame handling.
-
-* **Tkinter**: Lightweight desktop GUI.
 
 * **FFmpeg**: Backend for high-quality video encoding.
 
 ---
 
-## 🚧 Limitations & Future Scope
-
-**Current Limitations:**
-* **Input Format:** The application currently only supports static **image input** for the initial generation. It cannot process a video as the source file yet.
-
-**Future Scope:**
-* **Video-to-Video Pipeline:** I am looking into developing an optimized and fast video-to-video processing, allowing you to warp existing video files frame-by-frame.
-
----
 
 ## 🤖 AI Development Note
 
@@ -131,23 +114,8 @@ Run the `launch_gui.bat` file.
 
 ## 🔧 Troubleshooting
 
-### ❌ "CUDA not available"
-* **Check Drivers:** Ensure the latest NVIDIA drivers are installed.
-* **Verify CuPy:** Run `pip show cupy-cuda11x` (replace `11x` with your version) to ensure the GPU-specific library is installed.
-* **Compatibility:** Verify your GPU supports CUDA compute capability 3.0 or higher.
-
-
 ### ❌ Slow Performance
 * **Resolution:** High-res images (2K,4K+) scale exponentially in processing time.
-* **Forward Energy:** Disable this option in the GUI for a significant speed boost.
-
-### ❌ Video Export Fails
-* **FFmpeg Path:** Ensure [FFmpeg](https://ffmpeg.org/download.html) is installed and added to your System PATH.
-* **Frame Check:** Verify that the `output_frames/` folder contains generated `.png` files.
-* **Permissions:** Ensure the application has write access to the project directory.
+* **Crash:** Batch is an very sensitive slider. Start with default then crank looking at taskbar.
 
 ---
-
-## 🙏 Acknowledgments
-The core logic is directly taken from andrewdcampbell's fast python based implementation.
-**[andrewdcampbell](https://github.com/andrewdcampbell/seam-carving)**
