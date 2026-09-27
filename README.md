@@ -56,7 +56,7 @@ The engine is split into three distinct tabs, each designed for a specific meme 
 | 30% Intensity | 45% intensity |
 | :---: | :---: |
 | <img src="Media/30-Why_Not.gif" width="400"> | <img src="Media/45-Why_Not.gif" width="400"> |
-| **Face bias -55** | **Face bias -25** |
+| **Face bias -25** | **Face bias -25** |
 
 
 
