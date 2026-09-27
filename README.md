@@ -10,8 +10,8 @@
 <p align="center"> 
   <img src="Media/output_video3.gif" alt="description" width="200"> 
   <img src="Media/nice.gif" alt="description" width="200"> 
-  <img src="Media/30%Men_Cry.gif" alt="description" width="200"> 
-  <img src="Media/Men_Cry_10%.gif" alt="description" width="200">
+  <img src="Media/30%WhyNot.gif" alt="description" width="200"> 
+  <img src="Media/mutahar.gif" alt="description" width="200">
 </p>
 
 ---
