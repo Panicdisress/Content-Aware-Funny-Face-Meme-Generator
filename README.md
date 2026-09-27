@@ -1,11 +1,17 @@
 <h1 align="center"> Content Aware Funny Face Meme Generator </h1>
 
 <p align="center">
-<a href="#"><img src="https://img.shields.io/badge/GPU-Required-red.svg" alt="GPU"></a>
-
+  <a href="#"><img src="https://img.shields.io/badge/GPU-Required-red.svg" alt="GPU"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white" alt="Windows"></a>
+  <a href="#"><img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white" alt="C#"></a>
+  <a href="#"><img src="https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white" alt=".NET"></a>
+  <a href="#"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white" alt="OpenCV"></a>
+  <a href="#"><img src="https://img.shields.io/badge/FFmpeg-007808?logo=ffmpeg&logoColor=white" alt="FFmpeg"></a>
 </p>
 
 ## GPU-accelerated, multi-threaded content-aware scaling engine for creating distorted meme videos.
+
+
 <p align="center"> 
   <img src="Media/output_video3.gif" alt="description" width="200"> 
   <img src="Media/nice.gif" alt="description" width="200"> 
